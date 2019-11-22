@@ -9,13 +9,15 @@
         <h:outputStylesheet name="mystyle.css" library="css" />
     </h:head>
     <h:body>
-        <h1>ラジオボタン</h1>
-        <h:form>
-            <h:selectOneRadio value="#{bb3.city}" styleClass="inp">
-                <f:selectItems value="#{bb3.items}"/>
-            </h:selectOneRadio>
-            <h:commandButton value="送信"/>
-        </h:form>
+        <ui:composition>
+            <h1>ラジオボタン</h1>
+            <h:form>
+                <h:selectOneRadio value="#{bb3.city}" styleClass="inp">
+                    <f:selectItems value="#{bb3.items}"/>
+                </h:selectOneRadio>
+                <h:commandButton value="送信"/>
+            </h:form>
+        </ui:composition>
     </h:body>
 </html>
 

@@ -9,15 +9,17 @@
         <h:outputStylesheet name="mystyle.css" library="css" />
     </h:head>
     <h:body>
-        <h1>複数のチェックボックス</h1>
-        <h:form>
-            <h:selectManyCheckbox value="#{bb2.cities}" styleClass="inp">
-                <f:selectItem itemValue="1" itemLabel="東京"/>
-                <f:selectItem itemValue="2" itemLabel="大阪"/>
-                <f:selectItem itemValue="3" itemLabel="福岡"/>
-            </h:selectManyCheckbox>
-            <h:commandButton value="送信"/>
-        </h:form>
+        <ui:composition>
+            <h1>複数のチェックボックス</h1>
+            <h:form>
+                <h:selectManyCheckbox value="#{bb2.cities}" styleClass="inp">
+                    <f:selectItem itemValue="1" itemLabel="東京"/>
+                    <f:selectItem itemValue="2" itemLabel="大阪"/>
+                    <f:selectItem itemValue="3" itemLabel="福岡"/>
+                </h:selectManyCheckbox>
+                <h:commandButton value="送信"/>
+            </h:form>
+        </ui:composition>
     </h:body>
 </html>
 

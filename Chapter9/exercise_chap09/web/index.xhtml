@@ -19,14 +19,19 @@
                 </h:inputText>
                 <h:message id="msgCode" for="code" styleClass="error"/>
                 金　額
-                <h:inputText id="amount" value="#{bb.amount}" p:placeholder="100～10000"/>
+                <h:inputText id="amount" value="#{bb.amount}" p:placeholder="100～10000">
+                    <f:ajax event="blur" execute="@this" render="msgAmount" />
+                </h:inputText>
                 <h:message id="msgAmount" for="amount" styleClass="error"/>
                 割引率
-                <h:inputText id="rate" value="#{bb.rate}" p:placeholder="0.5～20.5"/>
+                <h:inputText id="rate" value="#{bb.rate}" p:placeholder="0.5～20.5">
+                    <f:ajax event="blur" execute="@this" render="msgRate" />
+                </h:inputText>
                 <h:message id="msgRate" for="rate" styleClass="error"/>
                 日　付
                 <h:inputText id="date" value="#{bb.date}" p:placeholder="2000/01/01">
                     <f:convertDateTime pattern="yyyy/M/d" />
+                    <f:ajax event="blur" execute="@this" render="msgDate" />
                 </h:inputText>                
                 <h:message id="msgDate" for="date" styleClass="error"/>
             </h:panelGrid>
